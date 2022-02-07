@@ -1,12 +1,9 @@
 public class Converter {
-    double convertStepInKm (double step){
-        double stepInKm = 0;
-        stepInKm = 75 * step / 1000000;
-        return stepInKm;
+    double stepInKm(double step) {
+        return 75 * step / 1000000;
     }
-    double convertKilocalories (double step){
-        double stepInCalories = 0;
-        stepInCalories = step * 50 / 1000;
-        return stepInCalories;
+
+    double stepInKcal(double step) {
+        return step * 50 / 1000;
     }
 }
