@@ -6,8 +6,8 @@ public class Main {
         MonthData monthData;
         Menu menu = new Menu();
         Scanner scanner = new Scanner(System.in);
-        label:
-        while (true) {
+        boolean isMenu = true;
+        while (isMenu) {
             menu.printMenu();
             int command = scanner.nextInt();
             switch (command) {
@@ -52,7 +52,8 @@ public class Main {
                 }
                 case 0:
                     System.out.println("Выход");
-                    break label;
+                    isMenu = false;
+                    break;
                 default:
                     System.out.println("Такой команды нет.");
                     break;
